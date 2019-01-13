@@ -2,5 +2,4 @@
 
 A Python package that returns BTTV emotes in ASCII
 
-
-...and maybe some obscene images too.
+Possible Chrome extension and/or API in the future.
