@@ -1,0 +1,5 @@
+High priority:
+-get list of emotes downloaded and formatted via emote_grabber.py
+-test ascii_generator.py functionality
+Low Priority:
+-format for Python package
