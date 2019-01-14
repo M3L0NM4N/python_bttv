@@ -1,6 +1,6 @@
 '''
 
-https://github.com/ajalt/pyasciigen
+Modified code from "https://github.com/ajalt/pyasciigen"
 
 
 ASCII Art generator
