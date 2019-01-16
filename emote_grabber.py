@@ -8,9 +8,9 @@ if not os.path.exists('./emotes'):
     os.makedirs('./emotes')
 print('Saving emotes to folder: ' + os.path.abspath('./emotes') + '...')
 print('Grabbing emote list...')
-emotes = json.load(urllib.request.urlopen('https://nightdev.com/betterttv/faces.php'))
-for code, emote in emotes['emotes'].items():
+emotes = json.load(urllib.request.urlopen('https://api.betterttv.net/emotes'))
+for edict in emotes['emotes']:
+    code = edict["url"]
     print('Downloading: ' + code + '...')
-    urllib.urlretrieve('http:' + emotes['template']['large'].replace('{image_id}', str(emote['image_id'])),
-                       './emotes/' + code + '.png')
+    urllib.request.urlretrieve('http:' + edict['regex'].replace('{image_id}', str(code['imageType'])),'./emotes/' + code + '.png')
 print('Done! Kappa')
