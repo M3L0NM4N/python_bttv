@@ -8,7 +8,9 @@ if not os.path.exists('./emotes'):
     os.makedirs('./emotes')
 print('Saving emotes to folder: ' + os.path.abspath('./emotes') + '...')
 print('Grabbing emote list...')
-emotes = json.load(urllib.request.urlopen('https://api.betterttv.net/emotes'))
+file = open(sortedstreamers.txt, "r", encoding="utf8")
+for streamer in file:
+    emotes = json.load(urllib.request.urlopen("https://api.betterttv.net/2/channels/" + streamer))
 for edict in emotes['emotes']:
     code = edict["url"]
     print('Downloading: ' + code + '...')
