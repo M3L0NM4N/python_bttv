@@ -1,5 +1,4 @@
 import re
-
 #using https://www.twitchmetrics.net/channels/viewership
 
 #gets list of top 250 viewed streamers on Twitch
